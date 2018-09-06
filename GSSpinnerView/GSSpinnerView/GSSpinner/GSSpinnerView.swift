@@ -12,6 +12,9 @@ class GSSpinnerView: UIView {
 
     var tableView:UITableView?
     var accessButton:UIButton?
+    var initialPoint:CGPoint?
+    var numberOfRows = 0
+    var tableViewWidth:CGFloat = 0.0
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -22,18 +25,18 @@ class GSSpinnerView: UIView {
     
     required init() {
         super.init(frame: (UIApplication.shared.delegate!.window??.frame)!)
-        configure()
+        
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-       configure()
+       
         
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        configure()
+        
     }
     
     func configure() {
@@ -45,13 +48,20 @@ class GSSpinnerView: UIView {
         accessButton?.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.7)
         accessButton?.tag = 1234
         accessButton?.addTarget(self, action: #selector(removeSpinnerView), for: .touchUpInside)
-        self.addSubview(accessButton!)
         
-        tableView = UITableView.init(frame: CGRect.init(x: 10, y: 10, width: 100, height: 100))
+        let height = CGFloat.init(numberOfRows * 44)
+        tableView = UITableView.init(frame: CGRect.init(x: (initialPoint?.x)!, y: (initialPoint?.y)!, width: tableViewWidth, height: height))
         tableView?.delegate = self
         tableView?.dataSource = self
-        self.addSubview(tableView!)
         
+        
+    }
+    
+    func showSpinnerView() {
+        configure()
+        self.addSubview(accessButton!)
+        self.addSubview(tableView!)
+        UIApplication.shared.delegate?.window!?.addSubview(self)
     }
     
     @objc func removeSpinnerView(sender: UIButton!) {

@@ -7,10 +7,12 @@
 //
 
 import UIKit
-
+protocol HomeScreenDelegate {
+   func showSpinnerView(withFrame frame:CGRect)
+}
 class HomeDataSource: NSObject {
-
     @IBOutlet weak var tableView: UITableView!
+    var delegate:HomeScreenDelegate?
 }
 
 //MARK: Table View Datasource
@@ -34,12 +36,10 @@ extension HomeDataSource:UITableViewDataSource {
 
 extension HomeDataSource:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected row \(indexPath.row + 1)")
         let selectedCell = tableView.cellForRow(at: indexPath)
-        let spinnerView  = GSSpinnerView.init()
-        spinnerView.initialPoint = CGPoint.init(x: (selectedCell?.frame.origin.x)! + 10, y: (selectedCell?.frame.origin.y)! + (selectedCell?.frame.size.height)! + 30)
-        spinnerView.tableViewWidth = (selectedCell?.frame.size.width)!
-        spinnerView.numberOfRows = 5
-        spinnerView.showSpinnerView()
+        if let tableSelectionDelagate = delegate, let cellFrame = selectedCell?.frame {
+            tableSelectionDelagate.showSpinnerView(withFrame: cellFrame)
+        }
+        
     }
 }

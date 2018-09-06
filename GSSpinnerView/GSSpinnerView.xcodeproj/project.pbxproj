@@ -16,6 +16,9 @@
 		CF83895521412666006D5338 /* GSSpinnerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83895421412666006D5338 /* GSSpinnerViewUITests.swift */; };
 		CF8389632141276D006D5338 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8389622141276D006D5338 /* HomeDataSource.swift */; };
 		CF838965214128FE006D5338 /* GSSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF838964214128FE006D5338 /* GSSpinnerView.swift */; };
+		CF83896821413717006D5338 /* SpinnerTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83896721413717006D5338 /* SpinnerTableViewDataSource.swift */; };
+		CF83896A2141644C006D5338 /* GSSpinnerMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8389692141644C006D5338 /* GSSpinnerMappable.swift */; };
+		CF83896C214166BB006D5338 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83896B214166BB006D5338 /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		CF83895621412666006D5338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8389622141276D006D5338 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		CF838964214128FE006D5338 /* GSSpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSSpinnerView.swift; sourceTree = "<group>"; };
+		CF83896721413717006D5338 /* SpinnerTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerTableViewDataSource.swift; sourceTree = "<group>"; };
+		CF8389692141644C006D5338 /* GSSpinnerMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSSpinnerMappable.swift; sourceTree = "<group>"; };
+		CF83896B214166BB006D5338 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				CF838964214128FE006D5338 /* GSSpinnerView.swift */,
+				CF83896721413717006D5338 /* SpinnerTableViewDataSource.swift */,
+				CF8389692141644C006D5338 /* GSSpinnerMappable.swift */,
+				CF83896B214166BB006D5338 /* String+.swift */,
 			);
 			path = GSSpinner;
 			sourceTree = "<group>";
@@ -270,6 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF83896821413717006D5338 /* SpinnerTableViewDataSource.swift in Sources */,
+				CF83896A2141644C006D5338 /* GSSpinnerMappable.swift in Sources */,
+				CF83896C214166BB006D5338 /* String+.swift in Sources */,
 				CF83893721412664006D5338 /* ViewController.swift in Sources */,
 				CF8389632141276D006D5338 /* HomeDataSource.swift in Sources */,
 				CF838965214128FE006D5338 /* GSSpinnerView.swift in Sources */,

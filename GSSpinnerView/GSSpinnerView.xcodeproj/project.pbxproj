@@ -14,6 +14,8 @@
 		CF83893F21412666006D5338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF83893D21412666006D5338 /* LaunchScreen.storyboard */; };
 		CF83894A21412666006D5338 /* GSSpinnerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83894921412666006D5338 /* GSSpinnerViewTests.swift */; };
 		CF83895521412666006D5338 /* GSSpinnerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83895421412666006D5338 /* GSSpinnerViewUITests.swift */; };
+		CF8389632141276D006D5338 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8389622141276D006D5338 /* HomeDataSource.swift */; };
+		CF838965214128FE006D5338 /* GSSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF838964214128FE006D5338 /* GSSpinnerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		CF83895021412666006D5338 /* GSSpinnerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GSSpinnerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF83895421412666006D5338 /* GSSpinnerViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSSpinnerViewUITests.swift; sourceTree = "<group>"; };
 		CF83895621412666006D5338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF8389622141276D006D5338 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		CF838964214128FE006D5338 /* GSSpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSSpinnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		CF83893321412664006D5338 /* GSSpinnerView */ = {
 			isa = PBXGroup;
 			children = (
+				CF8389662141290B006D5338 /* GSSpinner */,
 				CF83893421412664006D5338 /* AppDelegate.swift */,
 				CF83893621412664006D5338 /* ViewController.swift */,
 				CF83893821412664006D5338 /* Main.storyboard */,
 				CF83893B21412666006D5338 /* Assets.xcassets */,
 				CF83893D21412666006D5338 /* LaunchScreen.storyboard */,
 				CF83894021412666006D5338 /* Info.plist */,
+				CF8389622141276D006D5338 /* HomeDataSource.swift */,
 			);
 			path = GSSpinnerView;
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				CF83895621412666006D5338 /* Info.plist */,
 			);
 			path = GSSpinnerViewUITests;
+			sourceTree = "<group>";
+		};
+		CF8389662141290B006D5338 /* GSSpinner */ = {
+			isa = PBXGroup;
+			children = (
+				CF838964214128FE006D5338 /* GSSpinnerView.swift */,
+			);
+			path = GSSpinner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF83893721412664006D5338 /* ViewController.swift in Sources */,
+				CF8389632141276D006D5338 /* HomeDataSource.swift in Sources */,
+				CF838965214128FE006D5338 /* GSSpinnerView.swift in Sources */,
 				CF83893521412664006D5338 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

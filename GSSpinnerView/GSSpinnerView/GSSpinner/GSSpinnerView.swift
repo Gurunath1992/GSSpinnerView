@@ -56,7 +56,15 @@ class GSSpinnerView: UIView {
         
         let height = CGFloat.init((tableViewDataSource.spinnerItems?.count ?? 0) * 44)
         if let point = initialPoint {
-            tableView = UITableView.init(frame: CGRect.init(x: point.x, y: point.y, width: tableViewWidth, height: height))
+            if point.y + height < frame.height{
+                tableView = UITableView.init(frame: CGRect.init(x: point.x, y: point.y, width: tableViewWidth, height: height))
+            }
+            else if (point.y - height - 44) > 0 {
+                tableView = UITableView.init(frame: CGRect.init(x: point.x, y: point.y - height - 44, width: tableViewWidth, height: height))
+            }
+            else {
+                tableView = UITableView.init(frame: CGRect.init(x: point.x, y:point.y, width: tableViewWidth, height: frame.height - point.y))
+            }
             tableView!.delegate = tableViewDataSource
             tableView!.dataSource = tableViewDataSource
             tableViewDataSource.delegate = self

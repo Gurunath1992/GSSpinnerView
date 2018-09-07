@@ -28,9 +28,8 @@ extension ViewController:HomeScreenDelegate {
     func showSpinnerView(withFrame spinnerFrame:CGRect) {
         spinnerView  = GSSpinnerView.init()
         if let spinnerView = spinnerView {
-            let strings = ["one","two","three"]
-            let views = [UIView.init(frame: CGRect.zero)]
-            spinnerView.spinnerItems = views as? Array<GSSpinnerMappable>
+            let strings = ["one","two","three","four", "five","six","seven","eight","nine","ten"]
+            spinnerView.spinnerItems = strings as? Array<GSSpinnerMappable>
             spinnerView.delegate = self
             spinnerView.initialPoint = CGPoint.init(x: spinnerFrame.origin.x + 10, y: spinnerFrame.origin.y + spinnerFrame.size.height + 30)
             spinnerView.tableViewWidth = spinnerFrame.size.width
